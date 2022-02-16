@@ -1,0 +1,26 @@
+.slide(data-slide='what-is-training-data', data-slide-nav='how-does-it-work')
+  .explanation
+    .container-fluid
+      .row
+        .col
+          h2(data-i18n-str='training-data-title')
+      .row
+        .col-6(data-i18n-html='s3c-what-is-training-data-1')
+        .col-6
+          div(data-i18n-html='s3c-what-is-training-data-2')
+          .paint.columns#normalizepaint.mt-5
+            .column
+              .input.box.background
+                .input-canvas-wrapper
+                  canvas.drawcanvas
+                .input-placeholder
+                  span(data-i18n-str='ui-label-input-placeholder')
+            .column
+              .output.box
+                .normalize-canvas-wrapper
+                  canvas.normalizecanvas
+                p.normalize-canvas-label(data-i18n-str='ui-label-output-normalized')
+      .row
+        .col
+          .text-center
+            a.button.button-back(href='#how-does-it-work', data-i18n-str='how-work-learn-back')

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Neural Numbers">
+    <meta property="og:image" content="">
+    <meta name="description" content="Train a neural network with the MNIST-data set">
+    <meta property="og:description" content="Train a neural network with the MNIST-data set">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/neural-numbers.css" media="all" type="text/css">
+    <title>Neural Numbers component Test</title>
+  </head>
+  <body>
+    <h2>Basic</h2>
+    <div class="component neural-numbers-component" data-component="neural-numbers" data-model="assets/models/my-model.json" data-input-placeholder="write a number between 0&amp;nbsp;and&amp;nbsp;9"></div>
+    <h2>With bars</h2>
+    <div class="component neural-numbers-component" data-component="neural-numbers" data-model="assets/models/my-model.json" data-input-placeholder="write a number between 0&amp;nbsp;and&amp;nbsp;9" data-show-bars></div>
+    <h2>Normalization</h2>
+    <div class="component neural-numbers-component" data-component="neural-numbers" data-model="assets/models/my-model.json" data-input-placeholder="write a number between 0&amp;nbsp;and&amp;nbsp;9" data-show-normalizer data-show-output="false"></div>
+    <h2>Bad</h2>
+    <div class="component neural-numbers-component neural-numbers-component-bad" data-component="neural-numbers" data-model="assets/models/my-model-320.json" data-input-placeholder="write a number between 0&amp;nbsp;and&amp;nbsp;9" data-show-bars></div>
+    <h2>Mediocre</h2>
+    <div class="component neural-numbers-component neural-numbers-component-mediocre" data-component="neural-numbers" data-model="assets/models/my-model-1568.json" data-input-placeholder="write a number between 0&amp;nbsp;and&amp;nbsp;9" data-show-bars></div>
+    <script src="vendor/jquery/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="vendor/pep/pep.js"></script>
+    <script type="text/javascript" src="vendor/tf/tf.min.js"></script>
+    <script type="text/javascript" src="assets/js/dependencies.min.js"></script>
+    <script type="text/javascript" src="assets/js/neural-numbers.min.js"></script>
+  </body>
+</html>

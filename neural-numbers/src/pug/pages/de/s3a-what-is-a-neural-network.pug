@@ -1,0 +1,16 @@
+.col
+  p.lead
+    | In der Künstlichen Intelligenz verwendet man Modelle, die unserem menschlichen Nervensystem nachgebildet sind. Sie werden als <strong>künstliche neuronale Netze</strong> bezeichnet.  Jedes neuronale Netz besteht aus mehreren Schichten von <strong>Neuronen</strong>. Erst kommt die Eingabeschicht (<strong>Input Layer</strong>), dann versteckte Schichten (<strong>Hidden Layers</strong>) und schließlich die Ausgabeschicht (<strong>Output Layer</strong>) als Ergebnis.
+.col
+  .figure
+    img.img-fluid(src='assets/img/what-is-a-neural-network-fig-1.svg')
+  p.lead
+    | In unserem Beispiel haben wir 784 Eingabewerte (für jeden Pixel des 28 x 28 Pixel großen Bildes), 100 Neuronen in der versteckten Schicht, und 10 Ausgabewerte für jede mögliche Zahl zwischen 0 und 9.
+    |
+.col
+  p.lead
+    | Ein Neuron ist so aufgebaut:
+  .figure
+    img.img-fluid(src='assets/img/what-is-a-neural-network-fig-2-de.svg')
+  p
+    | Die einzelnen Eingabewerte werden vergrößert oder verkleinert, in dem sie mit Zahlen, den so genannten <strong>Gewichten</strong>, multipliziert werden. Zur Summe der Eingabewerte wird eine weitere Zahl, der <strong>Bias</strong>, dazugezählt. Dann wird dieser berechnete Wert mit einer vorgegebenen Funktion, der <strong>Aktivierungsfunktion</strong>, abgeglichen. Sie entscheidet, welcher Wert weitergegeben wird. In unserem Fall wird der berechnete Wert direkt als Ausgabe weitergegeben, wenn er positiv ist. Wenn er negativ ist, wird der Wert Null weitergegeben. Im “Verändere das Netz”-Modus kannst du unterschiedliche Aktivierungsfunktionen ausprobieren.

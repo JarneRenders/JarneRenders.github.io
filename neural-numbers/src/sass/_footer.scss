@@ -1,0 +1,107 @@
+$footer-height: 108px;
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-white-dark;
+  align-items: baseline;
+  display: flex;
+  padding: 26px;
+  z-index: 10;
+}
+
+.footer .navigation {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 65px;
+}
+
+.footer .navigation .button:nth-child(1)::before {
+  background-image: url("../../assets/img/pen.svg");
+}
+
+.footer .navigation .button:nth-child(2)::before {
+  background-image: url("../../assets/img/train.svg");
+}
+
+.footer .navigation .button:nth-child(3)::before {
+  background-image: url("../../assets/img/info.svg");
+}
+
+.footer .navigation .button:nth-child(4)::before {
+  background-image: url("../../assets/img/activate.svg");
+}
+
+.footer .utility {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+
+  .lang-switcher {
+    display: inline-block;
+
+    .lang-switcher-trigger {
+      width: 2em;
+      height: 2em;
+      display: block;
+      font-size: 1em;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../../assets/img/international.svg");
+      pointer-events: all;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .lang-switcher-menu-mask {
+      position: absolute;
+      bottom: $footer-height;
+      right: -1em;
+      height: calc(100vh - #{$footer-height});
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .lang-switcher-menu {
+      display: block;
+      position: absolute;
+      bottom: -100%;
+      right: 1em;
+      padding: 0.1em 0 0.2em 0;
+      margin: 0;
+      background-color: white;
+      border: 8px solid $color-white-dark;
+      border-bottom: none;
+      border-radius: 24px 24px 0 0;
+      transition: bottom 0.3s;
+      box-shadow: 0 15px 10px 4px rgba(0, 0, 0, 0.25);
+
+      &.visible {
+        bottom: 0 !important;
+      }
+      li {
+        display: block;
+        padding: 0;
+        margin: 0;
+        button {
+          display: block;
+          width: 100%;
+          border: 0;
+          background-color: transparent;
+          font-size: 2.2rem;
+          text-align: left;
+          padding: 0.4em 1.5em;
+          min-width: 4.5em;
+          cursor: pointer;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+}

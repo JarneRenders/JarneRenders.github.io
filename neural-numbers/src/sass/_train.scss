@@ -1,0 +1,431 @@
+.train {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.train .view {
+  margin-top: 35px;
+  height: 510px;
+  margin-right: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.train .view > div {
+  visibility: hidden;
+  display: none;
+  position: relative;
+}
+
+.train .view .inputspace {
+  margin: 20px;
+  width: 287px;
+}
+
+.train .view .inputspace > div {
+  position: absolute;
+  margin-top: 80px;
+  visibility: hidden;
+}
+
+.train .inputspace .paint > p {
+  font-weight: bold;
+}
+
+.train .view .simplenetwork {
+  width: 800px;
+  position: relative;
+}
+
+.train .view .bars {
+  width: 200px;
+  height: 87%;
+  margin-top: 2%;
+}
+
+.train .menu {
+  width: 400px;
+  height: 360px;
+  pointer-events: all;
+  position: relative;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 30px;
+}
+
+.train .menu.drawmode::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 120%;
+  z-index: 1;
+  background-color: rgba(255,255,255,.9);
+}
+
+.train .menu .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 358px;
+  /* left: 1302px; */
+  /* top: 347px; */
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+
+.train .menu .controls {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.train .menu .controls > a {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width: 30%;
+  height: 60%;
+}
+
+.train .menu .controls .reset {
+  visibility: hidden;
+  background-image: url("../../assets/img/reset.svg");
+}
+
+.train .menu .controls .pause-resume {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.train .menu .controls .pause-resume.resume {
+  background-image: url("../../assets/img/resume.svg");
+  background-position-x: 30px;
+}
+
+.train .menu .controls .pause-resume.pause {
+  background-image: url("../../assets/img/pause.svg");
+  background-color: $color-yellow;
+}
+
+.train .menu .controls .single-step {
+  background-image: url("../../assets/img/step.svg");
+}
+
+.train .menu .box .info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.train .menu .box .info > div:first-child {
+  width: 50%;
+}
+
+.train .menu .box .info .h-seperator {
+  height: 100%;
+  border: 1px solid #C4C4C4;
+  margin: auto;
+}
+
+.train .menu .box .v-seperator {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #C4C4C4;
+  /* margin: auto; */
+  height: 0;
+}
+
+.train .menu .info .number {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 49px;
+  text-align: center;
+}
+
+.train .menu .box .button {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: normal;
+  padding: 14px 2px;
+  width: 100%;
+  background: white;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  /* overwrite if .menu is drawmode */
+  pointer-events: all;
+  z-index: 2;
+}
+
+.train .menu.drawmode .box .button {
+  background: #E1E1E1;
+}
+
+.train .button:hover {
+  background: #EEEEEE;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.train .simplenetwork canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.train .view > div > canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.train .simplenetwork .network {
+  z-index: -12;
+}
+
+.train .simplenetwork .activations {
+  z-index: -10;
+}
+
+.train .advanced {
+  width: 640px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 15px;
+  pointer-events: all;
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  box-sizing: content-box;
+  /*TODO*/
+  .columns {
+    justify-content: space-between;
+
+    .column {
+      width: 45%;
+    }
+  }
+  position: relative;
+
+  &::before {
+    background: url("../../assets/img/topcurve.svg") left top no-repeat, url("../../assets/img/bottomcurve.svg") left bottom no-repeat,;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 108%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4%;
+  }
+}
+
+.train .parameter {
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.3em;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .select {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    .option {
+      width: 200px;
+      height: 100px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border: 1px solid #CCCCCC;
+      box-sizing: border-box;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+
+      .label {
+        padding: 10px;
+      }
+
+      &.selected {
+        background-color: $color-yellow;
+      }
+
+      &::before {
+        content: "";
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80% 40px;
+        width: 40%;
+      }
+
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
+
+.select.optimizerid {
+  justify-content: space-around;
+
+  .option {
+    width: 100%;
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &::before {
+      visibility: hidden;
+      width: 0 !important;
+    }
+  }
+}
+
+.select.modelid > .option:nth-child(1)::before {
+  background-image: url("../../assets/img/dense.svg");
+}
+
+.select.modelid > .option:nth-child(2)::before {
+  background-image: url("../../assets/img/cnn.svg");
+}
+
+.select.modelid > .option:nth-child(3)::before {
+  background-image: url("../../assets/img/nohidden.svg");
+}
+
+.select.activation > .option:nth-child(1)::before {
+  background-image: url("../../assets/img/relu.svg");
+}
+
+.select.activation > .option:nth-child(2)::before {
+  background-image: url("../../assets/img/tanh.svg");
+}
+
+.select.activation > .option:nth-child(3)::before {
+  background-image: url("../../assets/img/sigmoid.svg");
+}
+
+.train input[type=range] {
+  width: 100%;
+}
+
+.train .training .box {
+  width: 287px;
+  height: 287px;
+  border: 8px dashed $color-yellow-dark;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.train .training .traininputcanvas {
+  width: 287px;
+  height: 287px;
+}
+/*
+.train .paint .output {
+  position: absolute;
+  left: 860px;
+  width: 100px;
+  height: 100px;
+  top: 250px;
+  font-size: 30px;
+}
+*/
+.train .modeswitch {
+  position: relative;
+  padding-top: 24px;
+}
+
+.train .modeswitch > a {
+  position: absolute;
+  visibility: hidden;
+  width: 400px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  height: 66px;
+  text-align: center;
+  font-style: normal;
+  font-size: 24px;
+  padding: 14px 28px;
+  left: 0;
+}
+
+.train .modeswitch > a::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.train .modeswitch .activate::before {
+  background-image: url("../../assets/img/activate.svg");
+}
+
+.train .modeswitch .cancel::before {
+  background-image: url("../../assets/img/cancel.svg");
+}
+
+.train .modeswitch .cancel {
+  background-color: $color-yellow;
+}
+
+.train .learningratetxt {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+}

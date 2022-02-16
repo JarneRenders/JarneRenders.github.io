@@ -1,0 +1,70 @@
+.slide(data-slide='design-network')
+  h1.main-title: span(data-i18n-str='main-title')
+  .train
+    .view
+      .inputspace.visible
+        .paint
+          .input.box.background
+            .input-canvas-wrapper
+              canvas.drawcanvas
+            .input-placeholder
+              span(data-i18n-str='ui-label-input-placeholder')
+        .training
+          .box
+            canvas.traininputcanvas
+          p(data-i18n-str='training-label-training')
+      .simplenetwork
+        canvas.network
+        canvas.activations
+      .advanced.visible
+        .parameter
+          .title(data-i18n-str='training-adv-model-title')
+          .select.modelid
+            .option(data-value="dense").selected
+              span.label(data-i18n-str='training-adv-model-dense')
+            .option(data-value="cnn")
+              span.label(data-i18n-str='training-adv-model-cnn')
+            .option(data-value="nohidden")
+              span.label(data-i18n-str='training-adv-model-nohidden')
+        .parameter
+          .title(data-i18n-str='training-adv-activation-title')
+          .select.activation
+            .option(data-value="relu").selected
+              span.label(data-i18n-str='training-adv-activation-relu')
+            .option(data-value="tanh")
+              span.label(data-i18n-str='training-adv-activation-tanh')
+            .option(data-value="sigmoid")
+              span.label(data-i18n-str='training-adv-activation-sigmoid')
+        .columns
+          .column
+            .parameter
+              .title(data-i18n-str='training-adv-learning-rate')
+              input(type="range", min="-4" max="0" value="-3", step="any").learningrate
+              .learningratetxt 0.001
+          .column
+            .parameter
+              .title(data-i18n-str='training-adv-optimizer-title')
+              .select.optimizerid
+                .option(data-value="adam").selected
+                  span.label(data-i18n-str='training-adv-optimizer-adam')
+                .option(data-value="sgd")
+                  span.label(data-i18n-str='training-adv-optimizer-sgd')
+      .bars.vertical.visible
+
+    .menu
+      .box
+        .info
+          .info-item.imagesused
+            .number 0
+            div(data-i18n-str='training-label-images-used')
+          .h-seperator
+          .info-item.accuracy
+            .number 10%
+            div(data-i18n-str='training-label-predicted-accuracy')
+        .v-seperator
+        .controls
+          a(href="#design-network", data-i18n-str-title="training-label-reset").reset
+          a(href="#design-network", data-i18n-str-title="training-label-pause").pause-resume.pause
+          a(href="#design-network", data-i18n-str-title="training-label-step").single-step
+        //a.button.testit -&gt; Test the Network!
+

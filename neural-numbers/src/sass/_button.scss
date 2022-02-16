@@ -1,0 +1,42 @@
+
+.button {
+  font-style: normal;
+  font-size: 28px;
+  line-height: 50px;
+  font-weight: normal;
+  padding: 14px 28px;
+  margin: 16px;
+  pointer-events: all;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.button:hover {
+  background: #EEEEEE;
+  text-decoration: none;
+  color: $color-black;
+}
+
+.button.selected {
+  background: $color-yellow;
+}
+
+.button::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-right: 12px;
+  width: 30px;
+  height: 28px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 2px;
+}
+
+
+.button-back::before,
+.back.button::before {
+  background-image: url("../../assets/img/backarrow.svg");
+}
