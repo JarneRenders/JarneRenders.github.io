@@ -1,0 +1,63 @@
+tileTypes:
+  1:
+    name: Floor
+    color: '#ffffff'
+    walkable: true
+    reward: -1
+    type: floor
+  2:
+    name: Wall
+    color: '#666666'
+    walkable: false
+    texture: 'static/icons/wall.svg'
+    editorIcon: 'static/icons/wall.svg'
+    type: wall
+  3:
+    name: Exit
+    color: '#99ff99'
+    walkable: true
+    exit: true
+    reward: 50
+    texture: 'static/icons/exit.svg'
+    editorIcon: 'static/icons/exit.svg'
+    type: exit
+    react: always
+    reaction: 'static/openmoji/trophy.svg'
+  4:
+    name: Lava
+    color: '#ff3333'
+    walkable: true
+    reward: -5
+    type: lava
+    react: always
+    reaction: 'static/openmoji/fire.svg'
+  5:
+    name: Candy
+    color: '#fff799'
+    walkable: true
+    reward: -0.2
+    item: candy
+    editorIcon: 'static/icons/candy.svg'
+    type: candy
+    react: once
+    reaction: 'static/openmoji/red-heart.svg'
+  6:
+    name: Pit
+    color: '#000000'
+    walkable: true
+    exit: true
+    reward: -50
+    type: pit
+    react: always
+  7:
+    name: Cone
+    color: '#ffffff'
+    walkable: true
+    exit: false
+    reward: -5
+    texture: 'static/icons/cone.svg'
+    textureVisited: 'static/icons/cone-down.svg'
+    editorIcon: 'static/icons/cone.svg'
+    type: cone
+    react: once
+    reaction: 'static/openmoji/downcast-face-with-sweat.svg'

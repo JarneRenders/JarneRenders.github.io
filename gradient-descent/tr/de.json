@@ -1,0 +1,40 @@
+{
+  "press-to-start": "Start mit Knopfdruck",
+  "press-to-restart": "Neustart mit Knopfdruck",
+  "choose-num-players": "Wähle die Anzahl der Spieler*innen",
+  "choose-bot-type": {
+    "difficulty": "Wähle den Schwierigkeitsgrad des Bots",
+    "strategy": "Wähle die Art des Bots"
+  },
+  "bot-types": {
+    "difficulty": {
+      "none": "Ohne",
+      "random": "Leicht",
+      "gradient-descent": "Mittel",
+      "tangent-intersection": "Schwer"
+    },
+    "strategy": {
+      "none": "Ohne",
+      "random": "Zufall",
+      "gradient-descent": "Gradientenverfahren",
+      "tangent-intersection": "Benachbarte Tangenten"
+    }
+  },
+  "remaining-time": "Zeit:",
+  "remaining-probes": "Sonden:",
+  "objective": "Finde den Schatz am tiefsten Punkt des Ozeans!",
+  "go": "Los!",
+  "win-announcement-begin": "Spieler*in ",
+  "win-announcement-end": " hat den Schatz gefunden:",
+  "time-is-up": "Die Zeit ist abgelaufen!",
+  "no-probes-left": "Keine Sonden übrig!",
+  "game-over": "Game over!",
+  "treasures": [
+    "Fermats verlorener Beweis",
+    "Die letzte Stelle von Pi",
+    "Der letzte Primzahlzwilling",
+    "Ein Perpetuum Mobile",
+    "Anleitung zum Quadrieren des Kreises",
+    "Reisetasche von Paul Erdös"
+  ]
+}

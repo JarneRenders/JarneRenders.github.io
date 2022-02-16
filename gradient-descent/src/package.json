@@ -1,0 +1,48 @@
+{
+  "name": "gradient-descent",
+  "version": "1.5.1",
+  "description": "A game of learning the concepts behind gradient descent by exploring the depths looking for treasure",
+  "repository": "github:IMAGINARY/gradient-descent",
+  "author": "Eric Londaits <eric.londaits@imaginary.org>",
+  "private": true,
+  "engines": {
+    "node": ">=10.14.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@popperjs/core": "^2.4.0",
+    "@wessberg/pointer-events": "^1.0.9",
+    "assert": "^2.0.0",
+    "babelify": "^10.0.0",
+    "bootstrap": "^4.3.1",
+    "browserify": "^16.2.3",
+    "core-js": "^3.2.1",
+    "del": "^5.1.0",
+    "fetch-ie8": "^1.5.0",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-touch-fd": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0",
+    "regenerator-runtime": "^0.13.5",
+    "reload": "^3.2.0",
+    "through2": "^3.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
+  }
+}

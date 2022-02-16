@@ -1,0 +1,16 @@
+.ai-training-view-button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5em;
+  background-color: white;
+  padding: 0.5em;
+  min-width: 3em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.ai-training-view-slider {
+  .slider-text .slider-limit {
+    display: none;
+  }
+}

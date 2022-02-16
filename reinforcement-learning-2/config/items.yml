@@ -1,0 +1,22 @@
+items:
+  lemon:
+    name: Lemon
+    editorIcon: 'static/fa/lemon-solid.svg'
+    texture: 'static/fa/lemon-solid.svg'
+    reward: 0.1
+  carrot:
+    name: Carrot
+    editorIcon: 'static/fa/carrot-solid.svg'
+    texture: 'static/fa/carrot-solid.svg'
+    reward: 0.2
+  iceCream:
+    name: Ice Cream
+    editorIcon: 'static/fa/ice-cream-solid.svg'
+    texture: 'static/fa/ice-cream-solid.svg'
+    reward: 0.7
+  candy:
+    name: Candy
+    editorIcon: 'static/icons/candy.svg'
+    texture: 'static/icons/candy.svg'
+    reward: 0
+    inPalette: false

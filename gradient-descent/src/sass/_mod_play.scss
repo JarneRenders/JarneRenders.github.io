@@ -1,0 +1,86 @@
+.play {
+  color: lightgray;
+  stroke-width: 3;
+  stroke: none;
+  fill: none;
+}
+
+$player-colors: $color-player-0, $color-player-1, $color-player-2, $color-player-3;
+
+@mixin player($color) {
+  $player-color: $color;
+
+  color: $player-color;
+
+  .draw &, &.draw {
+    stroke: $player-color;
+  }
+
+  .fill &, &.fill {
+    fill: $player-color;
+  }
+}
+
+@for $i from 0 through 3 {
+  .player-#{$i} {
+    @include player(nth($player-colors, 1 + $i));
+  }
+}
+
+.player-bot {
+  @include player($color-player-bot);
+}
+
+.cover {
+  stroke: none;
+  fill: $color-bg;
+}
+
+.water {
+  stroke: $color-water;
+}
+
+.ground {
+  stroke: $color-ground;
+  fill: $color-bg;
+}
+
+.ground-cover {
+  @extend .cover;
+}
+
+.treasure {
+  stroke: $color-treasure;
+}
+
+.overlay {
+  .announcement-sequences-text {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.25ex;
+  }
+
+  .announcement-sequences-text-anchor {
+    position: absolute;
+  }
+
+  .game-stats {
+    position: relative;
+    text-align: right;
+    margin: 1ex 8ex 1ex 8ex;
+
+    .remaining-time {
+      position: absolute;
+      right: 0;
+    }
+
+    .remaining-probes {
+      position: absolute;
+      left: 0;
+    }
+
+    * .counter {
+      margin-left: 1ex;
+    }
+  }
+}
