@@ -3,8 +3,8 @@
   "press-to-restart": "Duw op een knop om opnieuw te beginnen",
   "choose-num-players": "Kies het aantal spelers",
   "choose-bot-type": {
-    "difficulty": "Kies de moeilijkheidsgraad van de bot",
-    "strategy": "Kies het bottype"
+    "difficulty": "Kies de moeilijkheidsgraad van de computer",
+    "strategy": "Kies de strategie van de computer"
   },
   "bot-types": {
     "difficulty": {
